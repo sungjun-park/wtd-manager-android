@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Google Api Key -->
+    <string name="google_project_number">797938003770</string>
+    <string name="google_api_key">AIzaSyB7RSsx_jPQ25hFgRKBxlo94tozPPAiHF0</string>
+
+    <!-- Application -->
+    <string name="app_name">지금뭐먹지</string>
+    <string name="hello_world">안녕 세상!</string>
+    <string name="action_settings">설정</string>
+    <string name="none">- -</string>
+    <string name="what_to_eat">뭘 먹으면 잘 먹었다고 소문이 날까...</string>
+    <string name="location">지역</string>
+    <string name="category">카테고리</string>
+    <string name="bookmarked">이 곳을 찜해두었습니다\n맛있겠당 히히</string>
+    <string name="my_bookmark">내가 찜한 곳</string>
+    <string name="my_bookmarks">내가 찜한 곳들</string>
+
+    <!-- Activity Title -->
+    <string name="title_activity_loading">Loading</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_bookmark">BookmarkActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+
+</resources>

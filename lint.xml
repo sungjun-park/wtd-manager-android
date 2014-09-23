@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ButtonStyle">
+        <ignore path="res/layout/activity_main.xml" />
+    </issue>
+    <issue id="ContentDescription" severity="ignore" />
+    <issue id="TypographyEllipsis">
+        <ignore path="res/values/strings.xml" />
+    </issue>
+    <issue id="UselessParent" severity="ignore" />
+</lint>
