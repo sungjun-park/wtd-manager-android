@@ -47,18 +47,6 @@
             android:textColor="@color/white"
             android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/image_main_refresh"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/selector_pink_red"
-            android:clickable="true"
-            android:onClick="loadLinks"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_action_refresh" />
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"

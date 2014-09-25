@@ -63,11 +63,17 @@ public class BookmarkActivity extends Activity implements BookmarkInter {
 		});
 	}
 
-	public void toggleEditable(View view) {
-		if (editable)
-			editable = false;
-		else
-			editable = true;
+	public void editBookmarks(View view) {
+		editable = true;
+		findViewById(R.id.image_main_bookmark_edit).setVisibility(View.GONE);
+		findViewById(R.id.image_main_bookmark_edit_done).setVisibility(View.VISIBLE);
+		setAdapter();
+	}
+
+	public void doneEditBookmarks(View view) {
+		editable = false;
+		findViewById(R.id.image_main_bookmark_edit).setVisibility(View.VISIBLE);
+		findViewById(R.id.image_main_bookmark_edit_done).setVisibility(View.GONE);
 		setAdapter();
 	}
 

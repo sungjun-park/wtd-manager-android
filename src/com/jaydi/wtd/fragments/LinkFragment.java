@@ -1,9 +1,16 @@
 package com.jaydi.wtd.fragments;
 
+import java.util.List;
+
 import android.annotation.SuppressLint;
-import android.graphics.Bitmap;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -35,31 +42,40 @@ public class LinkFragment extends Fragment {
 		view.getSettings().setJavaScriptEnabled(true);
 		view.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 		view.setWebViewClient(new WebViewClient() {
-			private int running = 0;
+			private int lc = 0;
 
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
-				running++;
-				view.loadUrl(url);
-				return true;
+				lc++;
+				if (url.startsWith("intent://")) {
+					Log.i("WV", url);
+					Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+					if (isAvailable(getActivity(), intent))
+						startActivity(intent);
+					return true;
+				} else if (lc > 2)
+					return true;
+				else
+					return false;
 			}
 
-			@Override
-			public void onPageStarted(WebView view, String url, Bitmap favicon) {
-				running = Math.max(running, 1);
+			public boolean isAvailable(Context ctx, Intent intent) {
+				final PackageManager mgr = ctx.getPackageManager();
+				List<ResolveInfo> list = mgr.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+				return list.size() > 0;
 			}
 
 			@Override
 			public void onPageFinished(WebView view, String url) {
-				if (--running == 0)
-					rootView.findViewById(R.id.progressbar_link_loading).setVisibility(View.GONE);
+				super.onPageFinished(view, url);
+				rootView.findViewById(R.id.progressbar_link_loading).setVisibility(View.GONE);
 			}
 
 		});
 		view.setOnTouchListener(new OnTouchListener() {
 
 			public boolean onTouch(View v, MotionEvent event) {
-				return true;
+				return (event.getAction() == MotionEvent.ACTION_MOVE);
 			}
 
 		});

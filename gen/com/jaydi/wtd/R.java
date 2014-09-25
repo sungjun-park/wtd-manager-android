@@ -188,10 +188,10 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f020015;
         public static final int common_signin_btn_text_pressed_dark=0x7f020016;
         public static final int common_signin_btn_text_pressed_light=0x7f020017;
-        public static final int ic_action_discard=0x7f020018;
-        public static final int ic_action_important=0x7f020019;
-        public static final int ic_action_overflow=0x7f02001a;
-        public static final int ic_action_refresh=0x7f02001b;
+        public static final int ic_action_accept=0x7f020018;
+        public static final int ic_action_discard=0x7f020019;
+        public static final int ic_action_important=0x7f02001a;
+        public static final int ic_action_overflow=0x7f02001b;
         public static final int ic_launcher=0x7f02001c;
         public static final int ic_stop=0x7f02001d;
         public static final int ic_stop_on=0x7f02001e;
@@ -200,26 +200,27 @@ containing a value of this type.
         public static final int selector_stop=0x7f020021;
     }
     public static final class id {
-        public static final int action_settings=0x7f050013;
-        public static final int button_main_cat_a=0x7f050009;
-        public static final int button_main_loc=0x7f050008;
+        public static final int action_settings=0x7f050014;
+        public static final int button_main_cat_a=0x7f05000a;
+        public static final int button_main_loc=0x7f050009;
         public static final int hybrid=0x7f050004;
-        public static final int image_adapted_bookmark_delete=0x7f05000f;
+        public static final int image_adapted_bookmark_delete=0x7f050010;
         public static final int image_main_bookmark=0x7f05000b;
-        public static final int image_main_bookmark_list=0x7f050005;
-        public static final int image_main_refresh=0x7f05000a;
-        public static final int list_bookmark_bookmarks=0x7f050006;
+        public static final int image_main_bookmark_edit=0x7f050005;
+        public static final int image_main_bookmark_edit_done=0x7f050006;
+        public static final int image_main_bookmark_list=0x7f05000c;
+        public static final int list_bookmark_bookmarks=0x7f050007;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
-        public static final int pager_main_links=0x7f050007;
-        public static final int progressbar_link_loading=0x7f050012;
-        public static final int progressbar_web_view_loading=0x7f05000d;
+        public static final int pager_main_links=0x7f050008;
+        public static final int progressbar_link_loading=0x7f050013;
+        public static final int progressbar_web_view_loading=0x7f05000e;
         public static final int satellite=0x7f050002;
         public static final int terrain=0x7f050003;
-        public static final int text_adapted_bookmark_title=0x7f05000e;
-        public static final int text_dialog_waiting_msg=0x7f050010;
-        public static final int web_link_blog=0x7f050011;
-        public static final int web_web_view_page=0x7f05000c;
+        public static final int text_adapted_bookmark_title=0x7f05000f;
+        public static final int text_dialog_waiting_msg=0x7f050011;
+        public static final int web_link_blog=0x7f050012;
+        public static final int web_web_view_page=0x7f05000d;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
@@ -242,10 +243,11 @@ containing a value of this type.
         public static final int web_view=0x7f0a0003;
     }
     public static final class string {
-        public static final int action_settings=0x7f060019;
+        public static final int action_settings=0x7f060022;
         /**  Application 
          */
         public static final int app_name=0x7f060017;
+        public static final int app_subname=0x7f060018;
         /** 
         Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70]
@@ -356,18 +358,19 @@ containing a value of this type.
         /**  Google Api Key 
          */
         public static final int google_project_number=0x7f060015;
-        public static final int hello_world=0x7f060018;
+        public static final int hello_world=0x7f060021;
+        public static final int loading_message=0x7f060019;
         public static final int location=0x7f06001c;
         public static final int my_bookmark=0x7f06001f;
         public static final int my_bookmarks=0x7f060020;
-        public static final int none=0x7f06001a;
-        public static final int title_activity_bookmark=0x7f060023;
+        public static final int none=0x7f06001b;
+        public static final int searching_message=0x7f06001a;
+        public static final int title_activity_bookmark=0x7f060025;
         /**  Activity Title 
          */
-        public static final int title_activity_loading=0x7f060021;
-        public static final int title_activity_main=0x7f060022;
-        public static final int title_activity_web_view=0x7f060024;
-        public static final int what_to_eat=0x7f06001b;
+        public static final int title_activity_loading=0x7f060023;
+        public static final int title_activity_main=0x7f060024;
+        public static final int title_activity_web_view=0x7f060026;
     }
     public static final class style {
         /** 
@@ -395,6 +398,7 @@ containing a value of this type.
         /**  Application theme. 
          */
         public static final int AppTheme=0x7f090001;
+        public static final int AppThemeNoTitle=0x7f090002;
     }
     public static final class styleable {
         /** Attributes that can be used with a MapAttrs.

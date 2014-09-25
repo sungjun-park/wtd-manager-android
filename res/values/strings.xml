@@ -6,16 +6,18 @@
     <string name="google_api_key">AIzaSyB7RSsx_jPQ25hFgRKBxlo94tozPPAiHF0</string>
 
     <!-- Application -->
-    <string name="app_name">지금뭐먹지</string>
-    <string name="hello_world">안녕 세상!</string>
-    <string name="action_settings">설정</string>
+    <string name="app_name">호로록</string>
+    <string name="app_subname">지금 뭐 먹지</string>
+    <string name="loading_message">지금. 여기서. 내게 딱 맞는.</string>
+    <string name="searching_message">딱 맞는 맛집 검색중~ 지금 바로 호로록!</string>
     <string name="none">- -</string>
-    <string name="what_to_eat">뭘 먹으면 잘 먹었다고 소문이 날까...</string>
     <string name="location">지역</string>
     <string name="category">카테고리</string>
     <string name="bookmarked">이 곳을 찜해두었습니다\n맛있겠당 히히</string>
     <string name="my_bookmark">내가 찜한 곳</string>
     <string name="my_bookmarks">내가 찜한 곳들</string>
+    <string name="hello_world">안녕 세상!</string>
+    <string name="action_settings">설정</string>
 
     <!-- Activity Title -->
     <string name="title_activity_loading">Loading</string>

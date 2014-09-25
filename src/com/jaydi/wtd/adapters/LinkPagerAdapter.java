@@ -11,22 +11,16 @@ import com.jaydi.wtd.fragments.LinkFragment;
 
 public class LinkPagerAdapter extends FragmentStatePagerAdapter {
 	private List<Link> links;
-	private Link currentLink;
 
 	public LinkPagerAdapter(FragmentManager fm, List<Link> links) {
 		super(fm);
 		this.links = links;
 	}
 
-	public Link getCurrentLink() {
-		return currentLink;
-	}
-
 	@Override
 	public Fragment getItem(int position) {
-		currentLink = links.get(position);
 		LinkFragment f = new LinkFragment();
-		f.setLink(currentLink);
+		f.setLink(links.get(position));
 		return f;
 	}
 
