@@ -10,7 +10,6 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -42,20 +41,15 @@ public class LinkFragment extends Fragment {
 		view.getSettings().setJavaScriptEnabled(true);
 		view.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 		view.setWebViewClient(new WebViewClient() {
-			private int lc = 0;
 
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
-				lc++;
 				if (url.startsWith("intent://")) {
-					Log.i("WV", url);
 					Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
 					if (isAvailable(getActivity(), intent))
 						startActivity(intent);
 					return true;
-				} else if (lc > 2)
-					return true;
-				else
+				} else
 					return false;
 			}
 
